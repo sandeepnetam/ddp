@@ -1,0 +1,5 @@
+*/media
+media/*
+*.sqlite3
+*/migration
+migration/*
