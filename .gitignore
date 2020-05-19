@@ -3,3 +3,4 @@ media/*
 *.sqlite3
 */migrations
 /migrations*
+Pipfile
