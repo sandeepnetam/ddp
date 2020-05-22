@@ -46,5 +46,5 @@ class ddp(models.Model):
 	price_type = models.CharField(max_length=3, choices=PRICE_TYPE, verbose_name='Price Type')	
 	value_in_crore = models.CharField(max_length=8, verbose_name="Value (In Crore Rs.)",validators=[numeric])
 	def __str__(self):
-		return '%s-%s-%s-%s' % (self.year, self.state, self.district, self.subsector)
+		return '%s-%s-%s-%s-%s' % (self.year, self.price_type, self.state, self.district, self.subsector)
 

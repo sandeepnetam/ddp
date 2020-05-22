@@ -1,0 +1,35 @@
+{% extends "ddp/index.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+
+{% if messages %}
+	<div class=" p-2 ">
+		<div class="alert {% if alert %} {{alert}} {% else %} alert-success {% endif %} alert-dismissible fade show" role="alert">
+		{{messages}}
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+
+		</div>
+	</div>
+{% endif %}
+
+
+<div class="row mt-2">
+	<div class="col-3"></div>
+	<div class="col-9">
+		<h2>Ddp Data entry</h2>
+		<form method="post" class="form-group">{% csrf_token %}
+		{{ forms|crispy }}
+		<button class="btn btn-success mt-2" type='submit'>Submit</button>	
+		</form>
+	</div>
+	
+	
+</div>
+
+
+
+{% endblock content %}
