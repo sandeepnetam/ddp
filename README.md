@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<h3>Project for District Wise Demostic Production of INDIA</h3>
+		<h3>Project for District Wise Domestic Production of INDIA</h3>
 	</div>
 
 </body>
