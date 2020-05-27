@@ -1,0 +1,17 @@
+{% extends 'ddp/base.html' %}
+
+{% block content %}
+
+<h1>Live Stock List </h1>
+
+<ul>
+
+  <!-- <li><a href="#"> First </a></li> -->
+  {% for livestockitem in livestockitem_list %}
+  <li><a href="{{ livestockitem.id }}">{{ livestockitem.item }}</a></li>
+  {% endfor %}
+
+</ul>
+
+
+{% endblock %}

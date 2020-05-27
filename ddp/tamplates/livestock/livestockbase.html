@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>District Wise Demostic Production</title>
+	 <!-- ... -->
+     
+      <!-- ... -->
+</head>
+<style type="text/css">
+	#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+<body>
+	<div class="container-fluid">
+		
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand" href="/livestock/">DDP</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarColor02">
+			
+			
+		    <ul class="navbar-nav mr-auto">
+
+	    	<li class="nav-item dropdown">
+			    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Entry</a>
+			    <div class="dropdown-menu" style="">
+			    	<a class="dropdown-item" href="/livestock/entry/year">Year</a>
+			    	<a class="dropdown-item" href="/livestock/entry/district">District</a>
+			    	<a class="dropdown-item" href="/livestock/entry/unit">Unit</a>
+			    	<a class="dropdown-item" href="/livestock/entry/item">Livestock Item</a>
+			    	<a class="dropdown-item" href="/livestock/entry/livestockgroup/">Livestock Group</a>
+					<a class="dropdown-item" href="/livestock/entry/livestockdata/">Livestock Data</a>
+			    </div>
+			    
+			  </li>
+
+			  <li class="nav-item dropdown">
+			    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Display</a>
+			    <div class="dropdown-menu" style="">
+			      <a class="dropdown-item" href="#">Group Wise Display</a>
+			    </div>
+			    <div class="dropdown-menu" style="">
+			      <a class="dropdown-item" href="#">Item Wise Display</a>
+			    </div>
+			  </li>
+
+			  <li class="nav-item dropdown">
+			    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Report</a>
+			    <div class="dropdown-menu" style="">
+			      <a class="dropdown-item" href="#">Live Stock Report</a>
+			    </div>
+			  </li>
+			  
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">About</a>
+		      </li>
+
+		    </ul>
+		    <form class="form-inline my-2 my-lg-0">
+		      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+		      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+		    </form>
+		  </div>
+		</nav>
+
+		{% block content %}{% endblock %}
+
+
+	<!-- # js -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	</div>
+</body>
+</html>
+
+

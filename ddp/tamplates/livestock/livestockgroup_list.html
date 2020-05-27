@@ -1,0 +1,17 @@
+{% extends 'livestock/livestockbase.html' %}
+
+{% block content %}
+
+<h1>Live Stock List </h1>
+
+<ul>
+
+  <!-- <li><a href="#"> First </a></li> -->
+  {% for livestockgroup in livestockgroup_list %}
+  <li><a href="{{ livestockgroup.id }}">{{ livestockgroup.titel }}</a></li>
+  {% endfor %}
+
+</ul>
+
+
+{% endblock %}

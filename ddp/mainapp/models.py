@@ -44,7 +44,7 @@ class ddp(models.Model):
 	district = models.ForeignKey('district', on_delete=models.SET_NULL, verbose_name='District', null=True)
 	subsector = models.ForeignKey('subsector', on_delete=models.SET_NULL, verbose_name='Sub Sector', null=True)
 	price_type = models.CharField(max_length=3, choices=PRICE_TYPE, verbose_name='Price Type')	
-	value_in_crore = models.CharField(max_length=8, verbose_name="Value (In Crore Rs.)",validators=[numeric])
+	value_in_crore = models.CharField(max_length=8, verbose_name="Value (In Lakhs Rs.)",validators=[numeric])
 	def __str__(self):
 		return '%s-%s-%s-%s-%s' % (self.year, self.price_type, self.state, self.district, self.subsector)
 

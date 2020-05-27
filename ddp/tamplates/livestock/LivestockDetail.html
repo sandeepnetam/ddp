@@ -1,0 +1,21 @@
+{% extends 'livestock/livestockbase.html' %}
+
+{% block content %}
+
+
+<h1 class="m-3">Live Stock Data List.</h1>
+<table class="table table-hover m-3">
+
+  <tbody>{% for i in data %}
+    <tr class="table-active">
+      
+      <td>{{ i }}</td>
+     
+    </tr> {% endfor %}
+    
+  </tbody>
+</table> 
+
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'livestock/livestockbase.html' %}
+
+{% block content %}
+
+{% if messages %}
+	<table class="table table-hover">
+  
+  <tbody>
+    
+    <tr class="table-success">
+      <th scope="row">Success</th>
+      <td>{{messages}}</td>
+    </tr>
+   
+  </tbody>
+</table> 
+{% endif %}
+
+<!-- <div class="container py-4">
+	
+
+	<form name="create" method="POST" action="."> {% csrf_token %}
+			{{ forms.as_p }}
+		<button type="submit">Submit</button>
+	</form></div> -->
+
+
+	<div class="columns is-mobile">
+    <div class="column is-half is-offset-one-quarter">
+      <h3 class="title is-size3">Live Stock Data Entry </h3>
+      <form action="." method="POST">
+        {% csrf_token %}
+        {% for field in forms %}
+        <dir class="field">
+          <label for="{{ field.id_for_label }}" class="label">{{field.html_name}}</label>
+          {{field}}
+        </dir>
+        {% endfor %}
+        <button type="submit" class="button is-primary">Submit</button>
+      </form>
+        
+    </div>
+  </div>
+
+
+
+
+{% if data %}
+
+  <table id="customers">
+    
+  
+{% for i in data %}
+  <tr>
+   <td>{{i.id}}</td><td>{{i}}</td><td><a href="{{i.id}}/update/"> Update</a></td><td><a href="{{i.id}}/delete/"> Delete</a></td>
+  </tr>
+{% endfor %}
+</table>
+{% endif %}
+
+
+<br>
+<br>
+
+
+
+
+{% endblock %}
